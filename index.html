@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星詠魔力｜市場攤位比價</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div>
+      <h1>星詠魔力｜市場攤位比價</h1>
+      <p>直接使用 StarCG 原始市場搜尋，再依價格整理所有符合攤位。</p>
+    </div>
+    <a href="https://member.starcg.net/market.php?page=1&type=all&server=all" target="_blank">原始市場 ↗</a>
+  </header>
+
+  <section class="panel">
+    <div class="searchbar">
+      <input id="q" placeholder="輸入關鍵字，例如：壽喜鍋" autofocus>
+      <select id="server">
+        <option value="all">S1 + S2 + S3</option>
+        <option value="S1">S1</option>
+        <option value="S2">S2</option>
+        <option value="S3">S3</option>
+      </select>
+      <select id="type">
+        <option value="all">道具 + 寵物</option>
+        <option value="item">道具</option>
+        <option value="pet">寵物</option>
+      </select>
+      <select id="currency">
+        <option value="all">全部貨幣</option>
+        <option value="gold">🪙 金幣</option>
+        <option value="crystal">💎 魔晶</option>
+      </select>
+      <select id="sort">
+        <option value="price">依總價</option>
+        <option value="unit">依單價</option>
+      </select>
+      <button id="search">搜尋</button>
+    </div>
+
+    <div class="currency-tabs">
+      <button data-cur="all" class="tab active">全部</button>
+      <button data-cur="gold" class="tab">🪙 金幣</button>
+      <button data-cur="crystal" class="tab">💎 魔晶</button>
+    </div>
+
+    <div id="status" class="status">輸入關鍵字後搜尋。網站會即時使用原始市場的搜尋功能。</div>
+  </section>
+
+  <section id="summary" class="summary hidden"></section>
+  <section id="results" class="results"></section>
+</main>
+<script src="./config.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
